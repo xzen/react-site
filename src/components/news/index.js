@@ -1,15 +1,13 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 
-import { getLastEvents } from './actions'
+import { getEventsData } from './actions'
 
 import Results from './components/results/index.js'
 
 class News extends Component {
   componentDidMount() {
-    const { dispatch } = this.props
-
-    dispatch(getLastEvents())
+    getEventsData()
   }
 
   render() {
